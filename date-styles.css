@@ -1,0 +1,198 @@
+.date-page {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.date-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 650px);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.15rem, 6vw, 3.5rem) 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fffdf9 0%, var(--paper) 58%, #fff4eb 100%);
+  border: 1px solid rgba(46, 42, 42, 0.16);
+  border-radius: 6px;
+  box-shadow: 12px 14px 0 #dfd0c2, 0 24px 38px rgba(46, 42, 42, 0.1);
+  animation: arrive 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.date-card::before {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(231, 111, 97, 0.2);
+  border-radius: 3px;
+  content: "";
+  pointer-events: none;
+}
+
+.back-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: var(--muted);
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--coral-dark);
+}
+
+.date-card h1 {
+  max-width: none;
+  font-size: clamp(2.1rem, 6vw, 3.5rem);
+}
+
+.date-options {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+  text-align: left;
+}
+
+.date-option {
+  display: grid;
+  grid-template-columns: 2rem 2.25rem 1fr 1.5rem;
+  align-items: center;
+  min-height: 86px;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  color: var(--ink);
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.date-option:hover,
+.date-option:focus-visible {
+  background: #fff1e9;
+  border-color: var(--coral);
+  outline: none;
+  transform: translateX(6px);
+}
+
+.option-number {
+  align-self: start;
+  padding-top: 0.2rem;
+  color: var(--coral-dark);
+  font-size: 0.65rem;
+}
+
+.option-icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  color: var(--coral-dark);
+  background: var(--sage);
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+}
+
+.option-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.option-copy strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.option-copy small {
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+.option-arrow {
+  color: var(--coral-dark);
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.chosen-option {
+  min-height: 2.2rem;
+  margin: 1.5rem 0 0;
+  color: var(--coral-dark);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.celebration {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+}
+
+.celebration span {
+  position: absolute;
+  left: 50%;
+  color: var(--coral);
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.celebration span:nth-child(1) { --x: -150px; --delay: 0ms; }
+.celebration span:nth-child(2) { --x: -75px; --delay: 100ms; }
+.celebration span:nth-child(3) { --x: 65px; --delay: 180ms; }
+.celebration span:nth-child(4) { --x: 125px; --delay: 70ms; }
+.celebration span:nth-child(5) { --x: 0px; --delay: 240ms; }
+
+.celebration.is-visible span {
+  animation: float-celebration 1.2s ease-out var(--delay) both;
+}
+
+@keyframes float-celebration {
+  0% { opacity: 0; transform: translate(-50%, 10px) scale(0.5) rotate(-10deg); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translate(calc(-50% + var(--x)), -60px) scale(1.1) rotate(18deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celebration.is-visible span {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-page {
+    padding: 2rem 0.85rem;
+  }
+
+  .date-card {
+    box-shadow: 9px 11px 0 rgba(46, 42, 42, 0.08);
+  }
+
+  .date-option {
+    grid-template-columns: 1.8rem 2rem 1fr;
+    min-height: 92px;
+    padding: 0.75rem;
+  }
+
+  .option-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .option-copy strong {
+    font-size: 1.1rem;
+  }
+
+  .option-copy small {
+    font-size: 0.58rem;
+  }
+
+  .option-arrow {
+    display: none;
+  }
+}

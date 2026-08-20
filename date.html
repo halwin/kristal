@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7efe6" />
+    <title>Choose Our Date</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="date-styles.css" />
+  </head>
+  <body>
+    <div class="background-flowers" aria-hidden="true">
+      <span class="background-flower flower-left">✿</span>
+      <span class="background-flower flower-right">❀</span>
+      <span class="background-flower flower-bottom">✾</span>
+      <span class="background-flower flower-top">❁</span>
+      <span class="background-flower flower-mid-left">✽</span>
+      <span class="background-flower flower-mid-right">✿</span>
+      <span class="flower-bouquet bouquet-left" aria-hidden="true">✿ ❀<br />╱╲</span>
+      <span class="flower-bouquet bouquet-right" aria-hidden="true">❁ ✾<br />╱╲</span>
+    </div>
+    <main class="page-shell date-page">
+      <section class="date-card" aria-live="polite">
+        <a class="back-link" href="index.html">← back</a>
+        <p class="eyebrow">Excellent decision</p>
+        <h1>Now, what sounds good?</h1>
+        <p class="note">Pick the mood. I will take care of the details.</p>
+
+        <div class="date-options" id="dateOptions">
+          <button class="date-option" type="button" data-choice="Dinner under the stars">
+            <span class="option-number">01</span>
+            <span class="option-icon" aria-hidden="true">🍽</span>
+            <span class="option-copy">
+              <strong>Dinner</strong>
+              <small>Something delicious, somewhere lovely</small>
+            </span>
+            <span class="option-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="date-option" type="button" data-choice="A movie and snacks">
+            <span class="option-number">02</span>
+            <span class="option-icon" aria-hidden="true">🎬</span>
+            <span class="option-copy">
+              <strong>Movie night</strong>
+              <small>Big screen, soft seats, excellent snacks</small>
+            </span>
+            <span class="option-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="date-option" type="button" data-choice="Coffee and a walk">
+            <span class="option-number">03</span>
+            <span class="option-icon" aria-hidden="true">☕</span>
+            <span class="option-copy">
+              <strong>Coffee &amp; a walk</strong>
+              <small>Good conversation and a place to wander</small>
+            </span>
+            <span class="option-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="date-option" type="button" data-choice="A picnic in the park">
+            <span class="option-number">04</span>
+            <span class="option-icon" aria-hidden="true">✿</span>
+            <span class="option-copy">
+              <strong>Picnic in the park</strong>
+              <small>Something cozy, sunny, and a little spontaneous</small>
+            </span>
+            <span class="option-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <div class="celebration" id="celebration" aria-hidden="true">
+          <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+        </div>
+        <p class="chosen-option" id="chosenOption" role="status"></p>
+        <div class="footer-mark"><span></span><small>let's make it a date to remember</small><span></span></div>
+      </section>
+    </main>
+    <script src="date-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7efe6" />
+    <title>A Little Question</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-flowers" aria-hidden="true">
+      <span class="background-flower flower-left">✿</span>
+      <span class="background-flower flower-right">❀</span>
+      <span class="background-flower flower-bottom">✾</span>
+      <span class="background-flower flower-top">❁</span>
+      <span class="background-flower flower-mid-left">✽</span>
+      <span class="background-flower flower-mid-right">✿</span>
+      <span class="flower-bouquet bouquet-left" aria-hidden="true">✿ ❀<br />╱╲</span>
+      <span class="flower-bouquet bouquet-right" aria-hidden="true">❁ ✾<br />╱╲</span>
+    </div>
+    <main class="page-shell">
+      <div class="paper-card" aria-live="polite">
+        <div class="topline">
+          <span class="sparkle" aria-hidden="true">✦</span>
+          <span>an invitation</span>
+          <span class="sparkle" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="flower" aria-hidden="true">
+          <span class="petal petal-one"></span>
+          <span class="petal petal-two"></span>
+          <span class="petal petal-three"></span>
+          <span class="petal petal-four"></span>
+          <span class="flower-center"></span>
+        </div>
+
+        <p class="greeting">Hi, Kristal!</p>
+        <h1 id="question">Will you go on a date with me?</h1>
+        <p class="note">Just you, me, and a little adventure.<br />I promise it will be worth getting dressed up for.</p>
+
+        <div class="response-area">
+          <div class="buttons" id="buttons">
+            <button class="button button-yes" id="yesButton" type="button">Yes, absolutely</button>
+            <button class="button button-no" id="noButton" type="button">Let me think...</button>
+          </div>
+          <p class="response" id="response" role="status"></p>
+        </div>
+
+      </div>
+      <div class="shadow-shape" aria-hidden="true"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

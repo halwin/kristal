@@ -433,6 +433,8 @@ h1 {
 
   .buttons .button-yes {
     top: 0;
+    left: 50%;
+    width: auto;
   }
 
   .button {

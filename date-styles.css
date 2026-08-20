@@ -146,6 +146,9 @@
 .celebration span:nth-child(3) { --x: 65px; --delay: 180ms; }
 .celebration span:nth-child(4) { --x: 125px; --delay: 70ms; }
 .celebration span:nth-child(5) { --x: 0px; --delay: 240ms; }
+.celebration span:nth-child(6) { --x: -110px; --delay: 300ms; }
+.celebration span:nth-child(7) { --x: 95px; --delay: 360ms; }
+.celebration span:nth-child(8) { --x: -35px; --delay: 420ms; }
 
 .celebration.is-visible span {
   animation: float-celebration 1.2s ease-out var(--delay) both;

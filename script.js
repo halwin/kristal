@@ -17,6 +17,8 @@ const noLines = [
 let noAttempts = 0;
 
 function acceptDate() {
+  yesButton.disabled = true;
+  noButton.disabled = true;
   window.location.href = "date.html";
 }
 
@@ -42,9 +44,21 @@ function moveNoButton(event) {
   const cursorX = event?.clientX ? event.clientX - frame.left : -1000;
   const cursorY = event?.clientY ? event.clientY - frame.top : -1000;
   const frameInset = 4;
+  const isMobile = window.matchMedia("(max-width: 480px)").matches;
 
   let left = 0;
   let top = 0;
+
+  if (isMobile) {
+    const mobileMinTop = yesBox.bottom + 16;
+    left = frameInset + Math.random() * Math.max(frameWidth - buttonWidth - frameInset * 2, 0);
+    top = mobileMinTop + Math.random() * Math.max(frameHeight - buttonHeight - mobileMinTop - frameInset, 0);
+    noButton.style.transform = "none";
+    noButton.style.left = `${left}px`;
+    noButton.style.top = `${top}px`;
+    return;
+  }
+
   for (let attempt = 0; attempt < 40; attempt += 1) {
     const candidateLeft = frameInset + Math.random() * Math.max(frameWidth - buttonWidth - frameInset * 2, 0);
     const candidateTop = frameInset + Math.random() * Math.max(frameHeight - buttonHeight - frameInset * 2, 0);

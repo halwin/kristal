@@ -422,8 +422,8 @@ h1 {
   }
 
   .buttons {
-    height: 300px;
-    min-height: 300px;
+    height: 260px;
+    min-height: 260px;
   }
 
   .buttons .button-no {
@@ -443,7 +443,7 @@ h1 {
   }
 
   .response-area {
-    min-height: 365px;
+    min-height: 325px;
   }
 
   .shadow-shape {
